@@ -1,0 +1,102 @@
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+
+// react icons
+import { IoIosSearch } from "react-icons/io";
+import { CiMenuFries } from "react-icons/ci";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+const Header = () => {
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
+  return (
+    <nav className="w-full px-10 py-3 relative overflow-hidden bg-gray-900">
+      <div className="flex justify-around items-center w-full mx-auto relative z-10">
+
+        {/* Logo */}
+        <Image 
+          src="/img/logo.png" 
+          alt="logo" 
+          width={155} 
+          height={155} 
+          className="w-[70px]"
+        />
+
+        {/* Desktop nav */}
+        <ul className="items-center gap-4 text-[1rem] md:flex hidden">
+          {/* Button example */}
+          <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+            <span className="relative z-10 transition-all duration-500 group-hover:px-8">Home</span>
+          </li>
+          <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+            <span className="relative z-10 transition-all duration-500 group-hover:px-8">Features</span>
+          </li>
+          <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+            <span className="relative z-10 transition-all duration-500 group-hover:px-8">Blogs</span>
+          </li>
+          <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+            <span className="relative z-10 transition-all duration-500 group-hover:px-8">Shop</span>
+          </li>
+        </ul>
+
+       <div className="group relative cursor-pointer overflow-hidden rounded-md">
+  {/* Animated gradient background */}
+  <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform w-8 duration-500"></span>
+  
+  {/* Icon on top */}
+  <ShoppingCartIcon className="relative z-10 text-white text-[1.6rem] transition-all duration-500 group-hover:scale-110" />
+</div>
+        {/* Mobile menu icon */}
+        <div className="flex items-center gap-2 md:hidden">
+          <CiMenuFries
+            className="text-white cursor-pointer text-[1.8rem]"
+            onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+          />
+        </div>
+
+        {/* Mobile sidebar */}
+        <aside
+          className={`${
+            mobileSidebarOpen
+              ? "translate-x-0 opacity-100 z-20"
+              : "translate-x-[200px] opacity-0 z-[-1]"
+          } md:hidden p-4 text-center absolute top-[65px] right-0 w-full sm:w-[50%] rounded-md transition-all duration-300 bg-gray-900`}
+        >
+          <div className="relative mb-5">
+            <input
+              className="py-1.5 pr-4 w-full pl-10 rounded-full border border-gray-500 outline-none focus:border-blue-500 bg-gray-800 text-white"
+              placeholder="Search..."
+            />
+            <IoIosSearch className="absolute top-[8px] left-3 text-gray-400 text-[1.3rem]" />
+          </div>
+
+          <ul className="items-center gap-4 text-[1rem] flex flex-col">
+            <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+              <span className="relative z-10 transition-all duration-500 group-hover:px-8">Home</span>
+            </li>
+            <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+              <span className="relative z-10 transition-all duration-500 group-hover:px-8">Features</span>
+            </li>
+            <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+              <span className="relative z-10 transition-all duration-500 group-hover:px-8">Blogs</span>
+            </li>
+            <li className="group relative cursor-pointer px-5 py-2 rounded-md border border-gray-500 bg-gray-900 text-white overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+              <span className="relative z-10 transition-all duration-500 group-hover:px-8">Shop</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </nav>
+  );
+};
+
+export default Header;
