@@ -48,7 +48,7 @@ const ProductCard = ({ data }) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onMouseMove={handleMouseMove}
-        className="relative w-full sm:w-72 md:w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-5 overflow-hidden transition-all duration-300 hover:shadow-2xl"
+        className="relative w-full sm:w-72 md:w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-lg hover:shadow-amber-600 p-5 overflow-hidden transition-all duration-300 hover:shadow-2xl"
       >
         {/* Floating image */}
         <motion.div

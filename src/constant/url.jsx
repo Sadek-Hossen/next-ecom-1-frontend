@@ -1,3 +1,3 @@
-const BASE_URL="http://localhost:5000/api"
+const BASE_URL = "https://next-ecom-1-backend.vercel.app/api";
 
-export default BASE_URL
+export default BASE_URL;

@@ -31,17 +31,9 @@ const HeroSection = () => {
           <p className="text-[18px] text-gray-400 dark:text-slate-400 mt-2">
             Get fresh groceries online without stepping out to make delicious food with the freshest ingredients
           </p>
-          <div className="relative my-5">
-            <input
-              placeholder="Search here"
-              className="py-3 px-4 dark:text-[#abc2d3] dark:placeholder:text-slate-500 dark:bg-transparent dark:border-slate-700 dark:border w-full outline-none rounded-md bg-gray-100"
-            />
-            <button className="h-full absolute top-0 right-0 bg-[#F38160] px-3 text-white text-[1.3rem] rounded-r-md">
-              <CiSearch />
-            </button>
-          </div>
+        
 
-          <div className="grid grid-cols-1 text-gray-800 400px:grid-cols-2 gap-[15px] w-full sm:w-[80%]">
+          <div className="grid grid-cols-1 mt-4 text-gray-800 400px:grid-cols-2 gap-[15px] w-full sm:w-[80%]">
             <p className="flex items-center dark:text-slate-400 gap-[5px] text-gray-600 text-[1rem]">
               <FaCircleCheck className="text-[#F0B70D] text-[1.2rem]" /> Fresh Vegetables
             </p>

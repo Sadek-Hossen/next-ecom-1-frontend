@@ -49,7 +49,7 @@ const ShopCard = ({ data }) => {
         onMouseLeave={() => setIsHovered(false)}
         onMouseMove={handleMouseMove}
         className="relative w-full sm:w-72 md:w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-5 overflow-hidden 
-                   transition-all duration-300 hover:shadow-2xl flex flex-col justify-between min-h-[420px]"
+                   transition-all hover:shadow-amber-950 duration-300 hover:shadow-2xl flex flex-col justify-between min-h-[420px]"
       >
         {/* Floating image */}
         <motion.div
