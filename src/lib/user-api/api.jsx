@@ -41,7 +41,7 @@ export const loginUser = async (userData, router) => {
 
 export const getUser= async (userData, router) => {
   try {
-   const res = await axios.get(`http://localhost:5000/api/user/get`, {
+   const res = await axios.get(`https://next-ecom-1-backend.vercel.app/api/user/get`, {
   withCredentials: true,
 });
 

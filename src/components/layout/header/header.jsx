@@ -10,7 +10,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { CiMenuFries } from "react-icons/ci";
-import { IoIosSearch } from "react-icons/io";
+//import { IoIosSearch } from "react-icons/io";
 
 const Header = () => {
   const router = useRouter();
@@ -180,11 +180,11 @@ const Header = () => {
           } md:hidden bg-white p-4 text-center absolute top-[65px] dark:bg-slate-700 right-0 w-full sm:w-[50%] rounded-md transition-all duration-300`}
         >
           <div className="relative mb-5">
-            <input
+            {/* <input
               className="py-1.5 pr-4 dark:bg-slate-800 dark:text-[#abc2d3] dark:border-slate-900/50 w-full pl-10 rounded-full border border-gray-200 outline-none focus:border-[#3B9DF8]"
               placeholder="Search..."
-            />
-            <IoIosSearch className="absolute dark:text-slate-400 top-[8px] left-3 text-gray-500 text-[1.3rem]" />
+            /> */}
+            {/* <IoIosSearch className="absolute dark:text-slate-400 top-[8px] left-3 text-gray-500 text-[1.3rem]" /> */}
           </div>
           <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
             <li>
@@ -197,26 +197,26 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/features"
-                className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] dark:text-[#abc2d3] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"
-              >
-                Features
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blogs"
-                className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] dark:text-[#abc2d3] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"
-              >
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/shop"
+                   href="/shop"
                 className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] dark:text-[#abc2d3] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"
               >
                 Shop
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contruct"
+                className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] dark:text-[#abc2d3] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"
+              >
+                Contruct
+              </Link>
+            </li>
+            <li>
+              <Link
+                   href="/about"
+                className="before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] dark:text-[#abc2d3] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize"
+              >
+                    about
               </Link>
             </li>
           </ul>
